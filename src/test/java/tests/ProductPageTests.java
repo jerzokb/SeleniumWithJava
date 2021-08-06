@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pages.ProductPage;
 import utils.*;
 
-import static java.lang.Thread.sleep;
+
 
 public class ProductPageTests extends BaseTest {
 
