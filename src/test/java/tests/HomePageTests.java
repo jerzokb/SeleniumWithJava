@@ -47,4 +47,26 @@ public class HomePageTests extends BaseTest {
     public void shouldTestNumberOfSlides() {
         Assertions.assertThat(homePage.getSliderElementSize()).isEqualTo(3);
     }
+
+    @Test
+    public void shouldTestContactListText() {
+        Assertions.assertThat(homePage.getContactLinkText()).isEqualTo(HomePageUtils.CONTACT_LINK_TEXT);
+    }
+
+    @Test
+    public void shouldTestContactUsOption() {
+        homePage.clickContactLink();
+        Assertions.assertThat(driver.getCurrentUrl()).isEqualTo(ContactUsUtils.CURRENT_URL);
+    }
+
+    @Test
+    public void shouldTestSignInText() {
+        Assertions.assertThat(homePage.getSignInText()).isEqualTo(HomePageUtils.SIGN_IN_TEXT);
+    }
+
+    @Test
+    public void shouldTestSignInOption() {
+        homePage.clickSignIn();
+        Assertions.assertThat(driver.getCurrentUrl()).isEqualTo(SignInUtils.CURRENT_URL);
+    }
 }

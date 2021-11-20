@@ -21,7 +21,7 @@ public class OrderTest extends BaseTest{
     private String productName;
     private String productPrice;
 
-    private  Faker faker = new Faker();
+    private Faker faker = new Faker();
     private String firstName = faker.name().firstName();
     private String lastName = faker.name().lastName();
     private String email = faker.internet().emailAddress();

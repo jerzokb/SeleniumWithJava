@@ -23,6 +23,12 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//*[@id=\"carousel\"]/ul/li")
     List<WebElement> sliderElement;
 
+    @FindBy(id = "contact-link")
+    WebElement contactLink;
+
+    @FindBy(xpath = "//*[@id=\"_desktop_user_info\"]/div/a/span")
+    WebElement signIn;
+
     public void clickDropDownItem(int index) {
         switch (index) {
             case 3: {
@@ -42,5 +48,21 @@ public class HomePage extends BasePage {
 
     public Integer getSliderElementSize() {
         return sliderElement.size();
+    }
+
+    public void clickContactLink() {
+        contactLink.click();
+    }
+
+    public String getContactLinkText() {
+        return contactLink.getText();
+    }
+
+    public void clickSignIn() {
+        signIn.click();
+    }
+
+    public String getSignInText() {
+        return signIn.getText();
     }
 }
